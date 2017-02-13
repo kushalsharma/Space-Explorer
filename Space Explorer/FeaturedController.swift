@@ -35,7 +35,6 @@ class FeaturedController: UIViewController, ApodDataListener {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //alertView = getLoadingAlert()
         calendar.timeZone = TimeZone(abbreviation: "UTC")!
         
         let dateFormatter = DateFormatter()
@@ -107,6 +106,11 @@ class FeaturedController: UIViewController, ApodDataListener {
     
     func onError() {
         showAlert(title: "Error", message: "Something went wrong!", actionTitle: "Okay")
+    }
+    
+    @IBAction func shareButtonClicked(_ sender: UIBarButtonItem) {
+        let controller = UIActivityViewController(activityItems: ["https://apod.nasa.gov/apod/astropix.html"], applicationActivities: nil)
+        present(controller, animated: true, completion: nil)
     }
     
     func showAlert(title: String, message: String, actionTitle: String) {

@@ -54,7 +54,11 @@
                                 <action selector="pickDateClicked:" destination="yZX-8x-cRR" id="SWV-YZ-Sre"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="3pf-qH-1Ag"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="3pf-qH-1Ag">
+                            <connections>
+                                <action selector="shareButtonClicked:" destination="yZX-8x-cRR" id="YRr-IK-ixB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="qYX-dC-JeB" id="tgs-Nf-TgU"/>
